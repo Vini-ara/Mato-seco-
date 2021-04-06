@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mato-Seco Fotos</title>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="h-logo"> 
+            <a href="index.html" id="h-Logo"><h1>Mato seco</h1></a>
+        </div>
+        <div class="navigation">
+            <nav class="link-list">
+                <span><a href="#m-about">About</a></span>
+                <span><a href="">Photos</a></span>
+                <span><a href="#m-contact">Contact</a></span>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="m-about">
+            <img id="background-image" src="./background images/IMG_4336.JPG" alt="">
+            <div id="m-about-content-container">
+                    <div id="m-logo"></div>
+                <div id="m-division-bar"></div>
+                <div id="m-about-text-container">
+                    <div id="m-about-text">
+                        <h4> Sobre mim</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloribus velit aliquam, inventore voluptate
+                        cupiditate consequuntur placeat ut temporibus dolore. Perspiciatis laborum quas necessitatibus officiis voluptatum
+                        aliquam commodi, repellat nam?</p>
+                    </div>               
+            </div>
+            </div>
+        </section>
+        <section class="m-photos">
+            <div class="container">
+                <h4 id="m-header">Photos</h4>
+                <div id="m-photos-content">
+                    <button class="m-photos-btn" id="m-photos-btn-left"><img src="./assets/left-arrow.svg" alt=""></button>
+                    <div id="m-photos-container">
+                     <div class="img-card"><img src="./Photos/IMG_5364.jpg" alt=""></div>
+                        <div class="img-card"> <img src="./Photos/IMG_4389.JPG" alt=""></div>
+                        <div class="img-card"> <img src="./Photos/IMG_5940.jpg" alt=""></div>
+                        <div class="img-card"> <img src="./Photos/IMG_6201.jpg" alt=""></div>
+                    </div>
+                    <button class="m-photos-btn" id="m-photos-btn-right"><img src="./assets/right-arrow.svg" alt=""></button>
+                </div>
+            </div>
+        </section>
+        <section id="m-contact">
+            <h4>Contact Me</h4>
+            <div id="m-contact-container">
+                <div id="m-contact-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque accusantium incidunt consequuntur. Cum architecto
+                    eius harum beatae natus. Ipsam aliquam temporibus nostrum unde earum. Dicta optio nulla est perferendis id?</p>
+                </div>
+                <div id="m-contact-form">
+                    <form action="mailto:vinisiarbigu02@gmail.com" method="POST" enctype="text/plain" name="EmailForm">
+                        <div class="input-container">
+                            <input type="text" size="19" name="Contact-Name" placeholder="Name" required>
+                            <input type="email" name="Contact-Email" placeholder="Email" required>
+                        </div>
+                        <textarea name="Contact-Message" rows="6" placeholder="Message" required>
+                        </textarea><br>
+                        <button type="submit" value="Submit">Send</button>
+                    </form>
+                </div>
+            </div>    
+        </section>
+        <section class="modal">
+            <div class="modal-overlay">
+                <div class="previous-btn"></div>
+                <div class="modal-container"></div>
+                <div class="next-btn"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h4>Mato Seco</h4>
+    </footer>
+</body>
+</html>

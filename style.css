@@ -1,0 +1,306 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    scroll-behavior: smooth;
+}
+
+body {
+    background:rgb(250, 237, 178);
+    
+}
+
+
+/* --------- Header ------ */
+header {
+    width: 100%;
+    height: 10vh;
+    
+    background-color: transparent;
+    
+    opacity: 1;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+.h-logo {
+    margin-left: 3vw;
+
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.navigation {
+    margin-right: 10vw;
+
+    font-size: 25px;
+}
+
+nav span {
+    margin-left: 5vw;
+}
+
+/*----------- About --------*/
+
+#m-about {
+    position: relative;
+
+    height: 90vh;
+    width: 100%;
+
+    
+}
+
+#background-image{
+    position: absolute;
+    top: -10vh;
+
+    width: 100%;
+    height: 100vh;
+
+    opacity: 0.8;
+
+    z-index: -99;
+}
+
+#m-about-content-container {
+    width: 100%;
+    height: 90vh;
+
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.781));
+
+    z-index: 1;
+}
+
+#m-logo {
+    width: 50vw;
+    height: 100%;
+
+}
+
+#m-division-bar{
+    height: 80%;
+    width: 2px;
+
+    background-color: black;
+    border-radius: 1px;
+
+    opacity: 0.4;
+
+}
+
+#m-about-text-container {
+    width: 50vw;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+#m-about-text {
+    padding-top: 10rem;
+
+    position: relative;
+    bottom: 50px;
+}
+
+#m-about-text h4 {
+    text-align: center;
+
+    margin-bottom: 2rem;
+}
+
+#m-about-text p {
+    padding: 0 5rem;
+}
+
+/*-------- photos ---------*/
+
+.m-photos {
+    height: 100vh;
+    width: 100%; 
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#m-header {
+    font-size: 30px;
+    font-weight: bolder;
+    width: 100%;
+    height: 10%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#m-photos-content {
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#m-photos-container {
+    width: 70%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    
+} 
+
+.img-card {
+    width: auto;
+    height: auto;
+    aspect-ratio: 2/3;
+}
+
+.img-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    transition: ease 0.2s;
+}
+
+.img-card img:hover {
+    box-shadow: 10px 8px 10px rgba(66, 66, 66, 0.897);
+    transform: translateY(-5px) translateX(-10px);
+}
+
+.m-photos-btn {
+    height: 3%;
+    width: 3%;
+    background: transparent;
+    border: none;
+}
+
+
+    
+
+/*--------- contact -------*/
+
+#m-contact {
+    height: 50vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+
+    background-color: rgb(75, 75, 75);
+
+    scroll-behavior: smooth;
+}
+
+#m-contact h4 {
+    font-size: 30px;
+    height: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#m-contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 50%;
+}
+
+#m-contact-container {
+    display: flex;
+
+    height: 80%;
+    width: 100%;
+}
+
+.input-container input {
+    width: 20vw;
+    height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.699) ;
+    border-radius: 0.5rem;
+    font-family: Helvetica, sans-serif;
+}
+
+#m-contact-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 50%;
+}
+
+#m-contact-text p {
+    margin: 0 20% 0 20%;
+}
+
+
+#m-contact-form {
+    height: 100%;
+    width: 50%;
+    
+}
+
+#m-contact-form textarea {
+    width: 40vw;
+    height: 20vh;
+    resize: none;
+
+    margin-top: 1rem;
+
+    border: none;
+    border-radius: 0.5rem;
+    font-family: Helvetica, sans-serif;
+}
+
+#m-contact-form button {
+    width: 40vw;
+    height: 2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(107, 160, 55);
+    opacity: 0.6;
+    font-family: Helvetica, sans-serif;
+}
+
+#m-contact-form button:hover {
+    opacity: 1;
+}
+
+/*---- Footer ----*/
+
+footer {
+    height: 2rem;
+
+    text-align: center;
+
+    background-color: rgb(75, 75, 75);;
+}
