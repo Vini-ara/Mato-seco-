@@ -195,6 +195,7 @@ nav span {
     width: 3%;
     background: transparent;
     border: none;
+    outline: none;
 }
 
 
@@ -294,6 +295,75 @@ nav span {
 #m-contact-form button:hover {
     opacity: 1;
 }
+
+/* ------ Modal ----*/
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(75, 75, 75, 0.705);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    z-index: 999; 
+}
+
+.modal {
+    width: 80%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    height: 90%;
+    width: 100%;
+
+    background-color: transparent;
+    object-fit: contain;
+    
+}
+
+.modal img {
+    height: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+   
+    border-radius: 10px;
+}
+
+.nav {
+    height: 100%;
+    width: 10%; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav button{ 
+    width: 50%;
+    height: 10%;
+
+    background: transparent;
+    
+    border: none;
+    outline: none;
+}
+
+
 
 /*---- Footer ----*/
 
