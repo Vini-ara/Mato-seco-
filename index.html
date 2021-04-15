@@ -42,14 +42,7 @@
             <div class="container">
                 <h4 id="m-header">Photos</h4>
                 <div id="m-photos-content">
-                    <button class="m-photos-btn" id="m-photos-btn-left"><img src="./assets/left-arrow.svg" alt=""></button>
-                    <div id="m-photos-container">
-                     <div class="img-card"><img src="./Photos/IMG_5364.jpg" alt=""></div>
-                        <div class="img-card"> <img src="./Photos/IMG_4389.JPG" alt=""></div>
-                        <div class="img-card"> <img src="./Photos/IMG_5940.jpg" alt=""></div>
-                        <div class="img-card"> <img src="./Photos/IMG_6201.jpg" alt=""></div>
-                    </div>
-                    <button class="m-photos-btn" id="m-photos-btn-right"><img src="./assets/right-arrow.svg" alt=""></button>
+                    
                 </div>
             </div>
         </section>
@@ -74,6 +67,11 @@
             </div>    
         </section>
         <section class="modal-overlay">
+            <div class="close">
+                <button onclick="Modal.close()">
+                    <img src="./assets/close_black_24dp.svg" alt="close modal button">
+                </button>
+            </div>
             <div class="nav">
                 <button><img class="modal-navigation" src="./assets/left-arrow.svg" alt=""></button>
             </div>
@@ -90,5 +88,6 @@
     <footer>
         <h4>Mato Seco</h4>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

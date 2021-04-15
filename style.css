@@ -21,6 +21,10 @@ header {
     
     opacity: 1;
     z-index: 1;
+
+    position: fixed;
+
+    z-index: 999;
 }
 
 a {
@@ -50,7 +54,7 @@ nav span {
 #m-about {
     position: relative;
 
-    height: 90vh;
+    height: 100vh;
     width: 100%;
 
     
@@ -58,7 +62,7 @@ nav span {
 
 #background-image{
     position: absolute;
-    top: -10vh;
+    top: 0vh;
 
     width: 100%;
     height: 100vh;
@@ -70,7 +74,7 @@ nav span {
 
 #m-about-content-container {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
 
     position: absolute;
     top: 0;
@@ -91,7 +95,7 @@ nav span {
 }
 
 #m-division-bar{
-    height: 80%;
+    height: 70%;
     width: 2px;
 
     background-color: black;
@@ -99,12 +103,18 @@ nav span {
 
     opacity: 0.4;
 
+    position: relative;
+    top: 5%;
 }
 
 #m-about-text-container {
     width: 50vw;
     height: 100%;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
 }
 
@@ -180,9 +190,14 @@ nav span {
 .img-card img {
     width: 100%;
     height: 100%;
+
     border-radius: 0.5rem;
+
     object-fit: cover;
+
     transition: ease 0.2s;
+
+    cursor: pointer;
 }
 
 .img-card img:hover {
@@ -193,9 +208,13 @@ nav span {
 .m-photos-btn {
     height: 3%;
     width: 3%;
+
     background: transparent;
+
     border: none;
     outline: none;
+
+    cursor: pointer;
 }
 
 
@@ -278,18 +297,25 @@ nav span {
 
     border: none;
     border-radius: 0.5rem;
+
     font-family: Helvetica, sans-serif;
 }
 
 #m-contact-form button {
     width: 40vw;
     height: 2rem;
+
     margin-top: 1rem;
+
     border: none;
     border-radius: 0.5rem;
+
     background-color: rgb(107, 160, 55);
     opacity: 0.6;
+
     font-family: Helvetica, sans-serif;
+
+    cursor: pointer;
 }
 
 #m-contact-form button:hover {
@@ -302,7 +328,7 @@ nav span {
     width: 100%;
     height: 100%;
 
-    background: rgba(75, 75, 75, 0.705);
+    background: rgba(90, 90, 90, 0.9);
 
     display: flex;
     justify-content: space-around;
@@ -311,10 +337,15 @@ nav span {
     position: fixed;
     top: 0;
 
-    visibility: hidden;
-    opacity: 0;
+   visibility: hidden;
+   opacity: 0;
 
     z-index: 999; 
+}
+
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .modal {
@@ -361,7 +392,37 @@ nav span {
     
     border: none;
     outline: none;
+
+    cursor: pointer;
 }
+
+.close {
+    height: 5%;
+    width: 3%;
+    
+    position: fixed;
+
+    top: 0;
+    right: 0px;
+}
+
+.close button {
+    height: 100%;
+    width: 100%;
+
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+}
+
+.close img{
+    height: 100%;
+    width: 100%;
+}
+
 
 
 
