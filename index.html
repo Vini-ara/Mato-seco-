@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <title>Mato-Seco Fotos</title>
 </head>
-<body>
-    <header style="display: flex; justify-content: space-between; align-items: center;">
+<body onscroll="Header.Change()">
+    <header style="display: flex; justify-content: space-between; align-items: center;" id="header">
         <div class="h-logo"> 
             <a href="index.html" id="h-Logo"><h1>Mato seco</h1></a>
         </div>
@@ -73,15 +73,14 @@
                 </button>
             </div>
             <div class="nav">
-                <button><img class="modal-navigation" src="./assets/left-arrow.svg" alt=""></button>
+                <button onclick="NextPhoto.ModalPrev()"><img class="modal-navigation" src="./assets/left-arrow.svg" alt=""></button>
             </div>
             <div class="modal">
-                <div class="img-container">
-                    <img src="./Photos/IMG_8882.JPG" alt="">
+                <div class="img-container" id="modal-img">
                 </div>
             </div>
             <div class="nav">
-                <button><img class="modal-navigation" src="./assets/right-arrow.svg" alt=""></button>
+                <button onclick="NextPhoto.ModalNext()"><img class="modal-navigation" src="./assets/right-arrow.svg" alt=""></button>
             </div>
         </section>
     </main>
