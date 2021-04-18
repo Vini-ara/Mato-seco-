@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -31,7 +31,9 @@ header {
 
 a {
     text-decoration: none;
-    color:rgb(0, 0, 0);
+    color:rgb(245, 245, 245);
+
+    
 }
 
 .h-logo {
@@ -45,6 +47,10 @@ a {
     margin-right: 10vw;
 
     font-size: 25px;
+}
+
+.navigation a:hover {
+    color:#09BC8A;
 }
 
 nav span {
@@ -62,17 +68,29 @@ nav span {
     
 }
 
-#background-image{
-    position: absolute;
-    top: 0vh;
-
+.background-image {
     width: 100%;
     height: 100vh;
 
-    opacity: 0.8;
+    opacity: 0;
 
-    z-index: -99;
+    z-index: -999;
+
+    transition: opacity 1s ease-in;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+
+    position: absolute;
+
 }
+
+.background-image.front {
+    z-index: -99;
+    opacity: 0.8;
+}
+
 
 #m-about-content-container {
     width: 100%;
@@ -118,6 +136,7 @@ nav span {
     flex-direction: row;
     align-items: center;
 
+    color: white;
 }
 
 #m-about-text {
@@ -135,6 +154,32 @@ nav span {
 
 #m-about-text p {
     padding: 0 5rem;
+}
+
+#scrollDown {
+    position: absolute;
+
+    height: 10%;
+    width: 10%;
+
+    align-self: flex-end;
+    justify-self: center;
+}
+
+#scrollDown a{
+    height: 100%;
+    width: 100%;
+
+    opacity: 0.5;
+}
+
+#scrollDown a:hover {
+    opacity: 0.8;
+}
+
+#scrollDown img{
+    width: 100%;
+    height: 100%;
 }
 
 /*-------- photos ---------*/
@@ -159,6 +204,8 @@ nav span {
     font-weight: bolder;
     width: 100%;
     height: 10%;
+
+    color:#25283D;
     
     display: flex;
     align-items: center;
@@ -204,6 +251,7 @@ nav span {
 
 .img-card img:hover {
     box-shadow: 10px 8px 10px rgba(66, 66, 66, 0.897);
+
     transform: translateY(-5px) translateX(-10px);
 }
 
@@ -232,9 +280,11 @@ nav span {
     flex-direction: column;
     align-items: space-around;
 
-    background-color: rgb(75, 75, 75);
+    background-color:#25283D;
 
     scroll-behavior: smooth;
+
+    color: white;
 }
 
 #m-contact h4 {
@@ -267,7 +317,6 @@ nav span {
     height: 2rem;
     border: 1px solid rgba(0, 0, 0, 0.699) ;
     border-radius: 0.5rem;
-    font-family: Helvetica, sans-serif;
 }
 
 #m-contact-text {
@@ -275,8 +324,49 @@ nav span {
     align-items: center;
     justify-content: center;
 
+    flex-direction: column;
+
     height: 100%;
     width: 50%;
+}
+
+.Contact-logo-container {
+    height: 20%;
+    width: 50%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Contact-logo {
+    width: 50px;
+    height: 50px;
+    background:#09BC8A;
+
+    border-radius: 50%;
+}
+
+.Contact-logo a {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column~~;
+}
+
+#m-contact-text span {
+    position: relative;
+
+    top: 10px;
 }
 
 #m-contact-text p {
@@ -299,8 +389,6 @@ nav span {
 
     border: none;
     border-radius: 0.5rem;
-
-    font-family: Helvetica, sans-serif;
 }
 
 #m-contact-form button {
@@ -312,10 +400,8 @@ nav span {
     border: none;
     border-radius: 0.5rem;
 
-    background-color: rgb(107, 160, 55);
+    background-color: #09BC8A;
     opacity: 0.6;
-
-    font-family: Helvetica, sans-serif;
 
     cursor: pointer;
 }
@@ -425,9 +511,6 @@ nav span {
     width: 100%;
 }
 
-
-
-
 /*---- Footer ----*/
 
 footer {
@@ -435,5 +518,6 @@ footer {
 
     text-align: center;
 
-    background-color: rgb(75, 75, 75);;
+    background-color: #25283D;
+    color: white;
 }

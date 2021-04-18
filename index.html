@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Mato-Seco Fotos</title>
 </head>
 <body onscroll="Header.Change()">
@@ -17,28 +19,28 @@
         <div class="navigation">
             <nav class="link-list">
                 <span><a href="#m-about">About</a></span>
-                <span><a href="">Photos</a></span>
+                <span><a href="#M-photos">Photos</a></span>
                 <span><a href="#m-contact">Contact</a></span>
             </nav>
         </div>
     </header>
     <main>
         <section id="m-about">
-            <img id="background-image" src="./background images/IMG_4336.JPG" alt="">
+           <div id="background">
+           </div>
             <div id="m-about-content-container">
-                    <div id="m-logo"></div>
+                <div id="m-logo"></div>
                 <div id="m-division-bar"></div>
                 <div id="m-about-text-container">
                     <div id="m-about-text">
-                        <h4> Sobre mim</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloribus velit aliquam, inventore voluptate
-                        cupiditate consequuntur placeat ut temporibus dolore. Perspiciatis laborum quas necessitatibus officiis voluptatum
-                        aliquam commodi, repellat nam?</p>
+                        <h4> Sobre Mim</h4>
+                        <p>Olá! Sou Vinícius o criador desse site e dono dessas fotinhas. Fotografo aves desde pequeno e sou apaixonado por elas. Aqui se encontram as minhas melhores fotos das aves mais bonitas do cerrado, espero que Gostem!!</p>
                     </div>               
-            </div>
+                </div>
+                <div id="scrollDown"> <a href="#M-photos"><img src="./assets/expand_more_white_24dp.svg" alt=""></a></div>
             </div>
         </section>
-        <section class="m-photos">
+        <section class="m-photos" id="M-photos">
             <div class="container">
                 <h4 id="m-header">Photos</h4>
                 <div id="m-photos-content">
@@ -50,8 +52,21 @@
             <h4>Contact Me</h4>
             <div id="m-contact-container">
                 <div id="m-contact-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque accusantium incidunt consequuntur. Cum architecto
-                    eius harum beatae natus. Ipsam aliquam temporibus nostrum unde earum. Dicta optio nulla est perferendis id?</p>
+                    <p>Gostou de alguma das fotos??</p> <br> <p>Entre em contato comigo pelo campo de e-mail ao lado ou pelos contatos abaixo para adquirir um quadro emoldurado com alguma dessa belezuras!!</p><br><br>
+                    <div class="Contact-logo-container">
+                        <div class="social-icon">
+                            <div class="Contact-logo">
+                                <a href="https://www.instagram.com/mato.seco_/"><img src="./assets/iconmonstr-instagram-11.svg" alt="instagram"></a>
+                            </div>
+                            <span>@mato.seco_</span>
+                        </div>
+                        <div class="social-icon">
+                            <div class="Contact-logo">
+                                <a href="mailto:vinisiarbigu02@gmail.com"><img src="/assets/iconmonstr-email-12.svg" alt="email"></a>
+                            </div>
+                            <span><a href="mailto:vinisiarbigu02@gmail.com">vinisiarbigu02@gmail.com</a></span>
+                        </div>   
+                    </div>
                 </div>
                 <div id="m-contact-form">
                     <form action="mailto:vinisiarbigu02@gmail.com" method="POST" enctype="text/plain" name="EmailForm">
@@ -87,6 +102,7 @@
     <footer>
         <h4>Mato Seco</h4>
     </footer>
-    <script src="script.js"></script>
+    <script src="scripts/Jquerry.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
