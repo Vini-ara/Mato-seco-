@@ -50,8 +50,11 @@ const DOM = {
     addPhotos() {
         let place = document.getElementById("m-photos-content")
 
-        let code = `
-        <button class="m-photos-btn" id="m-photos-btn-left" onclick="NextPhoto.prev()"><img src="./assets/left-arrow.svg" alt=""></button>
+        let code
+
+        if(window.innerWidth > 700) {
+            code = `
+                    <button class="m-photos-btn" id="m-photos-btn-left" onclick="NextPhoto.prev()"><img src="./assets/left-arrow.svg" alt=""></button>
                     <div id="m-photos-container">
                         <div class="img-card"><img src="./Photos/${Photos[counter1]}.jpg" alt="Photo" onclick="Modal.open(0)"></div>
                         <div class="img-card"> <img src="./Photos/${Photos[counter2]}.jpg" alt="Photo" onclick="Modal.open(1)"></div>
@@ -59,7 +62,17 @@ const DOM = {
                         <div class="img-card"> <img src="./Photos/${Photos[counter4]}.jpg" alt="Photo" onclick="Modal.open(3)"></div>
                     </div>
                     <button class="m-photos-btn" id="m-photos-btn-right" onclick="NextPhoto.next()"><img src="./assets/right-arrow.svg" alt=""></button>
-        `
+        `} else {
+            code = 
+            `
+                    <button class="m-photos-btn" id="m-photos-btn-left" onclick="NextPhoto.prev()"><img src="./assets/left-arrow.svg" alt=""></button>
+                    <div id="m-photos-container">
+                        <div class="img-card"><img src="./Photos/${Photos[counter1]}.jpg" alt="Photo" onclick="Modal.open(0)"></div>
+                    </div>
+                    <button class="m-photos-btn" id="m-photos-btn-right" onclick="NextPhoto.next()"><img src="./assets/right-arrow.svg" alt="">`
+        }
+
+        
 
         place.innerHTML = code
     },
@@ -190,3 +203,11 @@ const App = {
 
 
 App.init()
+
+addEventListener("resize", () => {
+    if(window.innerWidth > 700) {
+        DOM.addPhotos()
+    } else {
+        return DOM.addPhotos()
+    }
+})
