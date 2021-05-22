@@ -18,9 +18,9 @@ const Modal = {
 
         document.querySelector(".modal-overlay").classList.add("active")
 
-        //document.body.style.position = 'fixed';
+        document.body.style.position = 'fixed';
 
-        //document.body.style.top = `-${window.scrollY}px`;
+        document.body.style.top = `-${window.scrollY}px`;
 
         if (n == 0) return DOM.ModalPhoto(counter1)
 

@@ -16,7 +16,8 @@
 
 body {
     background:rgb(250, 237, 178);
-    
+
+    min-width: 100%;
 }
 
 
