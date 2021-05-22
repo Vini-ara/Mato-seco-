@@ -8,18 +8,19 @@ var ModalIndex
 var BackIndex = 0;
 var BackIndex1 = 1;
 
-const Photos = ["IMG_2422","IMG_2446","IMG_3520-2","IMG_3553","IMG_3766","IMG_3774","IMG_4312","IMG_4336","IMG_4389","IMG_5364","IMG_5940","IMG_6201","IMG_6676","IMG_8617","IMG_8702","IMG_8853","IMG_8882","IMG_8932","IMG_8959","IMG_9279-2"]
+const Photos = ["IMG_0752-2","IMG_1818","IMG_2422","IMG_2446","IMG_2555","IMG_2785","IMG_3520-2","IMG_3553","IMG_3766","IMG_3774","IMG_4312","IMG_4336","IMG_4389","IMG_4459-2","IMG_4469","IMG_4565","IMG_5364","IMG_5376","IMG_5679-2","IMG_5940","IMG_6054","IMG_6201","IMG_6338","IMG_6676","IMG_7281","IMG_7350","IMG_7405","IMG_7849","IMG_7892","IMG_7925","IMG_8594","IMG_8617","IMG_8654","IMG_8684","IMG_8699","IMG_8702","IMG_8747","IMG_8877","IMG_8853","IMG_8882","IMG_8932","IMG_8959","IMG_9279-2","IMG_9480","IMG_9528[1]","IMG_9815[1]","IMG_25552"]
 
-const BackgroundImg = ["IMG_4336","IMG_5768","IMG_6051"]
+const BackgroundImg = ["IMG_4336","IMG_5768","IMG_6051","IMG_5783","IMG_7491"]
 
 const Modal = {
     open(n){
-        
+        Modal.during()
+
         document.querySelector(".modal-overlay").classList.add("active")
 
-        document.body.style.position = 'fixed';
+        //document.body.style.position = 'fixed';
 
-        document.body.style.top = `-${window.scrollY}px`;
+        //document.body.style.top = `-${window.scrollY}px`;
 
         if (n == 0) return DOM.ModalPhoto(counter1)
 
@@ -40,9 +41,15 @@ const Modal = {
         window.scrollTo(0, height)
     }, 
     during(){
-        while(document.querySelector(".modal-overlay").classList == "active") {
-            
-        }
+        const target = document.querySelector('.modal')
+
+        target.addEventListener('click', (event) => {
+            const img = document.getElementById('modalImg')
+
+            if(event.target !== img){
+                Modal.close()
+            }   
+        })
     }
 }
 
@@ -80,7 +87,7 @@ const DOM = {
     ModalPhoto(index){
         let container = document.getElementById("modal-img")
 
-        let code = `<img src="./Photos/${Photos[index]}.JPG" alt="">`
+        let code = `<img id='modalImg' src="./Photos/${Photos[index]}.JPG" alt="">`
 
         container.innerHTML = code
 
