@@ -1,7 +1,6 @@
 # Mato Seco Photos
----
+
 ## Overview
----
 
   One of my personal passions is photography, so my first website idea when I first learned the web basics was to make a portifolio for my photos!
   
